@@ -1,0 +1,75 @@
+/* Pour toutes les pages */
+
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	margin: auto;
+	width: 70%;
+}
+
+#content {
+}
+
+nav {
+	font-weight: bold;
+}
+
+#nav_menu ul {
+	width: 30%;
+	margin: auto;
+	padding: 12px;
+	padding-top: 8px;
+	list-style-type : none;
+	text-align: center;
+	margin-right: 0px;
+	
+	margin-bottom: 35px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#nav_cours ul {
+	margin: 5px auto;
+	padding: 15px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	list-style-type : none;
+	text-align: center;
+}
+
+#nav_menu li, #nav_cours li {
+	display : inline;
+	min-width: 30%;
+	padding : 0 0.5em; /* Pour espacer les boutons entre eux */
+}
+
+table {
+	border-collapse: collapse;
+}
+
+/* Pour la page semainier.html */
+#table_semainier {
+	text-align : center;
+	margin: auto;
+	border: 2px solid black;
+}
+
+#table_semainier th, #table_semainier tr td {
+	border: 1px solid black;
+	padding: 8px;
+}
+
+a {color:#aaa;text-decoration:none;cursor:pointer;cursor:hand}
+a:hover {color:#000;text-decoration:none;}
+
+#tri{
+	color:#46C2E8;
+}
