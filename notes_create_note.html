@@ -22,7 +22,7 @@
 			
 	</div>
 	<body>
-		 <IFRAME SRC="https://beta.etherpad.org/" width=90% height=700 style="margin:auto">  </IFRAME>
+		 <IFRAME name="my_frame" SRC="https://beta.etherpad.org/" width=90% height=700 style="margin:auto">  </IFRAME>
 		 <div id="abc">
 		<!-- Popup Div Starts Here -->
 			<div id="popupContact">
@@ -40,6 +40,8 @@
 	</div>
 <!-- Display Popup Button -->
 <button id="popup" onclick="div_show()">Save note</button>
+<h4>Ajouter texte par photo<input type="file" name"note"></h4>
+<button id="save_img" onclick="save_img()">Save img into note</button>
 	</body>
 
 	
@@ -60,6 +62,9 @@
 	//Function to Hide Popup
 	function div_hide(){
 	document.getElementById('abc').style.display = "none";
+	}
+	function save_img(){
+	window.frames['my_frame'].document.getElementById('magicdomid10').innerHTML = "<span class=""> tralalal </span>";
 	}
 	</script>
 </html>
