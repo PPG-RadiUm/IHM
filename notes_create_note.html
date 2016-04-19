@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>creation note</title>
 
-		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/style2.css"/>
 		
 	</head>
 	<div id="content">
@@ -17,23 +17,49 @@
 							<li><a href="index.html" title="Pour quitter l'application">Déconnexion</a></li>
 						</ul>
 					</nav>
-					<nav id="nav_cours">
-						<ul>
-							<li><a href="semainier.html" title="Interaction homme-machine">IHM</a></li>
-							<li><a href="semainier.html" title="Construction d'applications réparties">CAR</a></li>
-							<li><a href="semainier.html" title="Algorithme des bases de données">ABD</a></li>
-							<li><a href="semainier.html" title="Algorithmes et applications">AeA</a></li>
-							<li><a href="semainier.html" title="Business intelligence">BI</a></li>
-							<li><a href="semainier.html" title="Compilation">CMPL</a></li>
-							<li><a href="semainier.html" title="Langages avancés pour les bases de données">LABD</a></li>
-						</ul>
-					</nav>
 			</header>
 
 			
 	</div>
 	<body>
 		 <IFRAME SRC="https://beta.etherpad.org/" width=90% height=700 style="margin:auto">  </IFRAME>
+		 <div id="abc">
+		<!-- Popup Div Starts Here -->
+			<div id="popupContact">
+			<!-- Contact Us Form -->
+	<form action="#" id="form" method="post" name="form">
+	<img id="close" src="styles/images/" onclick ="div_hide()">
+	<h2>Save note</h2>
+	<hr>
+	<input id="cours" name="cours" placeholder="Cours" type="text">
+	<input id="date" name="date" placeholder="Date" type="text">
+	<a href="javascript:%20check_empty()" id="submit">Send</a>
+	</form>
+	</div>
+	<!-- Popup Div Ends Here -->
+	</div>
+<!-- Display Popup Button -->
+<button id="popup" onclick="div_show()">Save note</button>
 	</body>
+
 	
+
+	<script language="JavaScript" >
+	function check_empty() {
+	if (document.getElementById('cours').value == "" || document.getElementById('date').value == "") {
+	alert("Fill All Fields !");
+	} else {
+	document.getElementById('form').submit();
+	alert("Form Submitted Successfully...");
+	}
+	}
+	//Function To Display Popup
+	function div_show() {
+	document.getElementById('abc').style.display = "block";
+	}
+	//Function to Hide Popup
+	function div_hide(){
+	document.getElementById('abc').style.display = "none";
+	}
+	</script>
 </html>
