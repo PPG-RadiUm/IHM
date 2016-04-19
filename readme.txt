@@ -1,4 +1,4 @@
 Pour se connecter au site : 
 
-	Mail : test@gmail.com
-	Mdp : test
+	Mail : francis@gmail.com
+	Mdp : laliane

@@ -45,11 +45,18 @@ nav {
 	text-align: center;
 }
 
-#nav_menu li, #nav_cours li {
+#nav_menu li {
 	display : inline;
 	min-width: 30%;
 	padding : 0 0.5em; /* Pour espacer les boutons entre eux */
 }
+
+ #nav_cours li {
+	 display : inline;
+ 	min-width: 30%;
+	font-size: 25px;
+ 	padding : 0 0.5em; /* Pour espacer les boutons entre eux */
+ }
 
 table {
 	border-collapse: collapse;
@@ -88,4 +95,10 @@ h4{
 #form{
 	text-align:center;
 	margin:auto;
+}
+
+#check_div{
+	text-align: center;
+	margin-top : 50px;
+	font-size : 23px;
 }
