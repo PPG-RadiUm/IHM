@@ -6,13 +6,88 @@
 -->
 <html>
 	<head>
-		<title>One Column - Minimaxing by HTML5 UP</title>
+		<title>StudentPad</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
+	<script>
+	/*Fonction permettant de verifier le formulaire et les saisies*/
+	function verif_formulaire()
+	{
+		if(document.formulaire.nom.value == "")  {
+			alert("Veuillez entrer votre nom !");
+			document.formulaire.nom.focus();
+			return false;
+		}
+		if(document.formulaire.prenom.value == "") {
+			alert("Veuillez entrer votre prenom !");
+			document.formulaire.prenom.focus();
+			return false;
+		}
+		if(document.formulaire.password.value == "") {
+			alert("Veuillez entrer votre mot de passe !");
+			document.formulaire.password.focus();
+			return false;
+		}
+		if(document.formulaire.email.value == "") {
+			alert("Veuillez entrer votre mail !");
+			document.formulaire.email.focus();
+			return false;
+		}
+		if(document.formulaire.datenaissance.value == "") {
+			alert("Veuillez entrer votre date de naissance !");
+			document.formulaire.datenaissance.focus();
+			return false;
+		}
+		if(document.formulaire.nip.value == "") {
+			alert("Veuillez entrer votre nip !");
+			document.formulaire.nip.focus();
+			return false;
+		}
+
+		return true;
+	}
+
+	function fn()
+	{
+		if(document.formulairebis.mail.value == "" || document.formulairebis.password.value == ""){
+			if(document.formulairebis.mail.value == ""){
+				alert("Veuillez entrer votre mail !");
+				document.formulairebis.mail.focus();
+				return false;
+			}
+			if(document.formulairebis.password.value == "") {
+				alert("Veuillez entrer votre mot de passe !");
+				document.formulairebis.password.focus();
+				return false;
+			}
+		}else{
+			if(document.formulairebis.mail.value == "francis@gmail.com")  {
+				if(document.formulairebis.password.value == "laliane") {
+					return true;
+				}else{
+					alert("Mauvais mot de passe");
+					return false;
+				}
+			}else {
+				alert("Mauvais mail ou mauvais mot de passe");
+				return false;
+			}
+		}
+	}
+
+	function fnb()
+	{
+		if(verif_formulaire()){
+			alert("Inscription effectuée avec succès.");
+			return true;
+		}
+		return false;
+	}
+	</script>
 	<body>
 		<div id="page-wrapper">
 			<div id="header-wrapper">
@@ -21,16 +96,14 @@
 						<div class="12u">
 
 							<header id="header">
-								<h1><a href="#" id="logo">Minimaxing</a></h1>
+								<h1><a href="#" id="logo">StudentPad</a></h1>
+								
 								<nav id="nav">
-									<a href="index.html">Homepage</a>
-									<a href="twocolumn1.html">Two Column #1</a>
-									<a href="twocolumn2.html">Two Column #2</a>
-									<a href="onecolumn.html" class="current-page-item">One Column</a>
-									<a href="threecolumn.html">Three Column</a>
+									<a href="index.html">Home</a>
+									<a href="twocolumn1.html" >Profil</a>
+									<a href="twocolumn2.html" >Contact</a>
+									<a href="onecolumn.html" class="current-page-item ">Connexion</a>
 								</nav>
-							</header>
-
 						</div>
 					</div>
 				</div>
@@ -38,16 +111,44 @@
 			<div id="main">
 				<div class="container">
 					<div class="row main-row">
-						<div class="12u">
+						<div class="8u 12u(mobile)">
+
+							<section class="left-content">
+								<h2>Inscription</h2>
+								<br>
+								<br>
+								<h1 class="titrepage" align="center">Créer votre compte</h1>
+
+								<!-- Contenu -->
+								<div id="contenu">
+									<p align="center" style="margin-top : 30px; margin-bottom: 30px"><b> Veuillez entrer toutes les informations nécessaires à la création de votre compte</b></p>
+									<form id ="myform" name="formulaire" action="index.html" method="post">
+										<p><label for="nom"> Nom : </label> <input "type="text" name="nom" id="nom" required="required" data-message="Veuillez renseigner votre nom de famille"></p>
+										<p><label for="nom"> Prenom : </label> <input type="text" name="prenom" id="prenom" required="required" data-message="Veuillez renseigner votre prénom"></p>
+										<p> <label for="password"> Mot de passe :</label> <input type="password" name="password" id="password" required="required" data-message="Veuillez renseigner votre mot de passe"> </p>
+										<p> <label for="email"> E-mail : </label> <input type="e-mail" name="email" id="email" required="required" data-message="Veuillez renseigner votre mail"> </p>
+										<p> <label for="datenaissance"> Date de naissance : </label> <input type="datetime" name="datenaissance" id="datenaissance" required="required" data-message="Veuillez renseigner votre date de naissance"> </p>
+										<p> <label for="nip"> NIP : </label> <input type="text" name="nip" id="nip" required="required" data-message="Veuillez renseigner votre NIP"> </p>
+										<!--MODIFIER AFFICHAGE CHAMPS MANQUANT AVANT -->
+										<p align="center"><input type="submit" id="sub" value="Valider" class="button" onclick="return fnb()"></p>
+									</form>
+								</div>
+							</section>
+						</div>
+					<div class="4u 12u(mobile)">
 
 							<section>
-								<h2>One Column (no sidebar)</h2>
-								<p>This is the second generic interior page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante ante, viverra a ornare sed, convallis sed est. Proin felis sapien, adipiscing quis eleifend vel, sodales vitae sapien. Donec vel lacus leo, eu convallis metus. Cras egestas feugiat tortor, vitae interdum augue aliquam a. Sed nec augue id orci egestas commodo in eget magna. Nunc eleifend diam non odio laoreet placerat gravida nulla bibendum. Phasellus tempus imperdiet suscipit.</p>
-								<p>Mauris risus nulla, pulvinar vitae sagittis a, pharetra nec tellus. Suspendisse varius enim ac felis mattis aliquam. Aenean et justo quis ipsum gravida lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia bibendum cursus. Nullam nec pellentesque lacus. In porta erat in tortor rhoncus quis accumsan magna pretium. Nulla posuere magna eget mauris lacinia in mollis sem fermentum. Donec mollis adipiscing mauris, ut posuere enim rhoncus ut. Nunc commodo vestibulum orci vel placerat. Cras sed risus libero. Donec ac lacus vitae lectus mattis commodo id vitae libero. Etiam lorem odio, volutpat nec pulvinar sit amet, tincidunt ut lacus. Pellentesque consequat arcu vel nisi lobortis in pellentesque orci sollicitudin. Cras gravida lacus turpis, consectetur porttitor lectus. Cras malesuada tortor id neque porta ut semper quam iaculis.</p>
-								<p>Nulla ut tortor quam, a luctus nunc. Nulla condimentum diam porttitor arcu placerat tincidunt. Nunc non augue ipsum. Nulla facilisi. Phasellus feugiat augue in ipsum egestas semper. Suspendisse blandit, nisl ullamcorper blandit sollicitudin, sem leo auctor lectus, et volutpat mauris elit et odio. Ut elementum risus in metus mollis tristique vulputate nulla interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae orci dui, ut facilisis dui.</p>
+								<h2>Se connecter</h2>
+									<nav id="nav_menu" style="float:right">
+										<form id="myform" name="formulairebis" action="home.html" method="post" style="margin-top : 20px">
+											<p align="center">
+												<p><label for="nom"> Email : </label><input type="email" id="Email" name="mail" required="required" placeholder="Email"></p>
+												<p><label for="nom"> Mot de passe : </label><input type="password" id="password" name="password" required="required" placeholder="Password"></p>
+												<p align="center"><input type="submit" value="Connexion" class="button"  onclick="return fn()"></p>
+											</p>
+										</form>
+									</nav>
 							</section>
-
-						</div>
 					</div>
 				</div>
 			</div>

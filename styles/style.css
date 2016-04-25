@@ -81,24 +81,4 @@ a:hover {color:#000;text-decoration:none;}
 	color:#46C2E8;
 }
 
-/* Pour le login.html */
-#contenu{
-	width:850px;
-	height:715px;
-	margin:auto;
-}
 
-h4{
-	text-align:center;
-}
-
-#form{
-	text-align:center;
-	margin:auto;
-}
-
-#check_div{
-	text-align: center;
-	margin-top : 50px;
-	font-size : 23px;
-}
