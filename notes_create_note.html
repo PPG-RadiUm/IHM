@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>creation note</title>
+
+		<link rel="stylesheet" type="text/css" href="styles/style2.css"/>
+		
+	</head>
+	<div id="content">
+			<header>
+				<h1 style="float: left">StudentPad</h1>
+					<nav id="nav_menu">
+						<ul>
+							<li><a href= "home.html" title="home">Home </a></li>
+							<li><a href="profile.html" title="Voir votre profil">Profil</a></li>
+							<li><a href="contact.html" title="Nous contacter">Contact</a></li>
+							<li><a href="index.html" title="Pour quitter l'application">Déconnexion</a></li>
+						</ul>
+					</nav>
+			</header>
+
+			
+	</div>
+	<body>
+		 <IFRAME name="my_frame" SRC="https://beta.etherpad.org/" width=90% height=700 style="margin:auto">  </IFRAME>
+		 <div id="abc">
+		<!-- Popup Div Starts Here -->
+			<div id="popupContact">
+			<!-- Contact Us Form -->
+	<form action="#" id="form" method="post" name="form">
+	<img id="close" src="styles/images/" onclick ="div_hide()">
+	<h2>Save note</h2>
+	<hr>
+	<input id="cours" name="cours" placeholder="Cours" type="text">
+	<input id="date" name="date" placeholder="Date" type="text">
+	<a href="javascript:%20check_empty()" id="submit">Send</a>
+	</form>
+	</div>
+	<!-- Popup Div Ends Here -->
+	</div>
+<!-- Display Popup Button -->
+<button id="popup" onclick="div_show()">Save note</button>
+<h4>Ajouter texte par photo<input type="file" name"note"></h4>
+<button id="save_img" onclick="save_img()">Save img into note</button>
+	</body>
+
+	
+
+	<script language="JavaScript" >
+	function check_empty() {
+	if (document.getElementById('cours').value == "" || document.getElementById('date').value == "") {
+	alert("Fill All Fields !");
+	} else {
+	document.getElementById('form').submit();
+	alert("Form Submitted Successfully...");
+	}
+	}
+	//Function To Display Popup
+	function div_show() {
+	document.getElementById('abc').style.display = "block";
+	}
+	//Function to Hide Popup
+	function div_hide(){
+	document.getElementById('abc').style.display = "none";
+	}
+	function save_img(){
+	window.frames['my_frame'].document.getElementById('magicdomid10').innerHTML = "<span class=""> tralalal </span>";
+	}
+	</script>
+</html>

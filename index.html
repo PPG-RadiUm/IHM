@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	/*Fonction permettant de verifier le formulaire et les saisies*/
+	function verif_formulaire()
+	{
+		if(document.formulaire.nom.value == "")  {
+			alert("Veuillez entrer votre nom !");
+			document.formulaire.nom.focus();
+			return false;
+		}
+		if(document.formulaire.prenom.value == "") {
+			alert("Veuillez entrer votre prenom !");
+			document.formulaire.prenom.focus();
+			return false;
+		}
+		if(document.formulaire.password.value == "") {
+			alert("Veuillez entrer votre mot de passe !");
+			document.formulaire.password.focus();
+			return false;
+		}
+		if(document.formulaire.email.value == "") {
+			alert("Veuillez entrer votre mail !");
+			document.formulaire.email.focus();
+			return false;
+		}
+		if(document.formulaire.datenaissance.value == "") {
+			alert("Veuillez entrer votre date de naissance !");
+			document.formulaire.datenaissance.focus();
+			return false;
+		}
+		if(document.formulaire.nip.value == "") {
+			alert("Veuillez entrer votre nip !");
+			document.formulaire.nip.focus();
+			return false;
+		}
+
+		return true;
+	}
+
+	function fn()
+	{
+		if(document.formulairebis.mail.value == "" || document.formulairebis.password.value == ""){
+			if(document.formulairebis.mail.value == ""){
+				alert("Veuillez entrer votre mail !");
+				document.formulairebis.mail.focus();
+				return false;
+			}
+			if(document.formulairebis.password.value == "") {
+				alert("Veuillez entrer votre mot de passe !");
+				document.formulairebis.password.focus();
+				return false;
+			}
+		}else{
+			if(document.formulairebis.mail.value == "francis@gmail.com")  {
+				if(document.formulairebis.password.value == "laliane") {
+					return true;
+				}else{
+					alert("Mauvais mot de passe");
+					return false;
+				}
+			}else {
+				alert("Mauvais mail ou mauvais mot de passe");
+				return false;
+			}
+		}
+	}
+
+	function fnb()
+	{
+		if(verif_formulaire()){
+			alert("Inscription effectuée avec succès.");
+			return true;
+		}
+		return false;
+	}
+	</script>
+
+	<meta charset="utf-8">
+	<title>StudentPad - Inscription</title>
+
+	<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+</head>
+
+<body>
+	<!-- La div 'canevas' est utile pour positionner correctement la div 'footer' -->
+	<div id="content">
+		<h1 style="float: left"><a href="index.html"><FONT color="black">StudentPad</FONT></a></h1>
+		<nav id="nav_menu" style="float:right">
+			<form name="formulairebis" action="home.html" method="post" style="margin-top : 20px">
+				<p align="center">
+					<input type="email" id="Email" name="mail" required="required" placeholder="Email">
+					<input type="password" id="password" name="password" required="required" placeholder="Password">
+					<input type="submit" value="Connexion" style="height : 40px; width :110px; font-size : 100%"  onclick="return fn()">
+				</p>
+			</form>
+		</nav>
+
+		<!-- Sous-entete -->
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h1 class="titrepage" align="center">Creer votre compte</h1>
+
+		<!-- Contenu -->
+		<div id="contenu">
+			<p align="center" style="margin-top : 30px; margin-bottom: 30px"><b> Veuillez entrer toutes les informations nécessaires à la création de votre compte</b></p>
+			<form name="formulaire" action="index.html" method="post">
+				<p><label for="nom"> Nom : </label> <input type="text" name="nom" id="nom" required="required" data-message="Veuillez renseigner votre nom de famille"></p>
+				<p><label for="nom"> Prenom : </label> <input type="text" name="prenom" id="prenom" required="required" data-message="Veuillez renseigner votre prénom"></p>
+				<p> <label for="password"> Mot de passe :</label> <input type="password" name="password" id="password" required="required" data-message="Veuillez renseigner votre mot de passe"> </p>
+				<p> <label for="email"> E-mail : </label> <input type="e-mail" name="email" id="email" required="required" data-message="Veuillez renseigner votre mail"> </p>
+				<p> <label for="datenaissance"> Date de naissance : </label> <input type="datetime" name="datenaissance" id="datenaissance" required="required" data-message="Veuillez renseigner votre date de naissance"> </p>
+				<p> <label for="nip"> NIP : </label> <input type="text" name="nip" id="nip" required="required" data-message="Veuillez renseigner votre NIP"> </p>
+				<!--MODIFIER AFFICHAGE CHAMPS MANQUANT AVANT -->
+				<p align="center"><input type="submit" id="sub" value="Envoyer inscription" style="height : 40px; width :170px; font-size : 100%" onclick="return fnb()"></p>
+			</form>
+		</div>
+	</div>
+</body></html>

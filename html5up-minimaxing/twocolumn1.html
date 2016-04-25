@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<!--
+	Minimaxing by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>StudentPad</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<script>
+	/*Fonction permettant de verifier le formulaire et les saisies*/
+	function verif_formulaire()
+	{
+		if(document.formulaire.nom.value == "")  {
+			alert("Veuillez entrer votre nom !");
+			document.formulaire.nom.focus();
+			return false;
+		}
+		if(document.formulaire.prenom.value == "") {
+			alert("Veuillez entrer votre prenom !");
+			document.formulaire.prenom.focus();
+			return false;
+		}
+		if(document.formulaire.password.value == "") {
+			alert("Veuillez entrer votre mot de passe !");
+			document.formulaire.password.focus();
+			return false;
+		}
+		if(document.formulaire.email.value == "") {
+			alert("Veuillez entrer votre mail !");
+			document.formulaire.email.focus();
+			return false;
+		}
+		if(document.formulaire.datenaissance.value == "") {
+			alert("Veuillez entrer votre date de naissance !");
+			document.formulaire.datenaissance.focus();
+			return false;
+		}
+		if(document.formulaire.nip.value == "") {
+			alert("Veuillez entrer votre nip !");
+			document.formulaire.nip.focus();
+			return false;
+		}
+
+		return true;
+	}
+
+	function fn()
+	{
+		if(document.formulairebis.mail.value == "" || document.formulairebis.password.value == ""){
+			if(document.formulairebis.mail.value == ""){
+				alert("Veuillez entrer votre mail !");
+				document.formulairebis.mail.focus();
+				return false;
+			}
+			if(document.formulairebis.password.value == "") {
+				alert("Veuillez entrer votre mot de passe !");
+				document.formulairebis.password.focus();
+				return false;
+			}
+		}else{
+			if(document.formulairebis.mail.value == "francis@gmail.com")  {
+				if(document.formulairebis.password.value == "laliane") {
+					return true;
+				}else{
+					alert("Mauvais mot de passe");
+					return false;
+				}
+			}else {
+				alert("Mauvais mail ou mauvais mot de passe");
+				return false;
+			}
+		}
+	}
+
+	function fnb()
+	{
+		if(verif_formulaire()){
+			alert("Inscription effectuée avec succès.");
+			return true;
+		}
+		return false;
+	}
+	</script>
+	<body>
+		<div id="page-wrapper">
+			<div id="header-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+
+							<header id="header">
+								<h1><a href="#" id="logo">StudentPad</a></h1>
+								<nav id="nav">
+									<a href="index.html">Home</a>
+									<a href="twocolumn1.html" class="current-page-item ">Profil</a>
+									<a href="twocolumn2.html">Contact</a>
+									<a href="onecolumn.html">Connexion</a>
+								</nav>
+							</header>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<div class="container">
+					<div class="row main-row">
+						<div class="8u 12u(mobile)">
+
+							<section class="left-content">
+								<h2>Nous t'invitons à t'inscrire sur le site via le formulaire ci-dessous pour voir ton futur profil : </h2>
+								<br>
+								<br>
+								<h1 class="titrepage" align="center">Créer votre compte</h1>
+
+								<!-- Contenu -->
+								<div id="contenu">
+									<p align="center" style="margin-top : 30px; margin-bottom: 30px"><b> Veuillez entrer toutes les informations nécessaires à la création de votre compte</b></p>
+									<form id ="myform" name="formulaire" action="index.html" method="post">
+										<p><label for="nom"> Nom : </label> <input "type="text" name="nom" id="nom" required="required" data-message="Veuillez renseigner votre nom de famille"></p>
+										<p><label for="nom"> Prenom : </label> <input type="text" name="prenom" id="prenom" required="required" data-message="Veuillez renseigner votre prénom"></p>
+										<p> <label for="password"> Mot de passe :</label> <input type="password" name="password" id="password" required="required" data-message="Veuillez renseigner votre mot de passe"> </p>
+										<p> <label for="email"> E-mail : </label> <input type="e-mail" name="email" id="email" required="required" data-message="Veuillez renseigner votre mail"> </p>
+										<p> <label for="datenaissance"> Date de naissance : </label> <input type="datetime" name="datenaissance" id="datenaissance" required="required" data-message="Veuillez renseigner votre date de naissance"> </p>
+										<p> <label for="nip"> NIP : </label> <input type="text" name="nip" id="nip" required="required" data-message="Veuillez renseigner votre NIP"> </p>
+										<!--MODIFIER AFFICHAGE CHAMPS MANQUANT AVANT -->
+										<p align="center"><input type="submit" id="sub" value="Valider" class="button" onclick="return fnb()"></p>
+									</form>
+								</div>
+							</section>
+
+						</div>
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<h2>Membres enregistrés</h2>
+								<ul class="small-image-list">
+									<li>
+										<a href="#"><img src="images/pic2.jpg" alt="" class="left" /></a>
+										<h4>Laliane Francis</h4>
+										<p>membre depuis 28/12/2015..</p>
+									</li>
+									<li>
+										<a href="#"><img src="images/pic1.jpg" alt="" class="left" /></a>
+										<h4>Lefevre Sophie</h4>
+										<p>membre depuis 20/12/2015..</p>
+									</li>
+								</ul>
+							</section>
+
+							<section>
+								<h2>Quelques liens</h2>
+								<div>
+									<div class="row">
+										<div class="6u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="#">Note la plus lu de la semaine</a></li>
+												<li><a href="#">membre le plus actif de la semaine</a></li>
+												<li><a href="#">note ayant reçu le plus de vote</a></li>
+												<li><a href="#">matière la plus consulté du moment</a></li>
+												<li><a href="#">notes en cours d'édition</a></li>
+											</ul>
+										</div>
+										
+									</div>
+								</div>
+							</section>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="8u 12u(mobile)">
+
+							<section>
+								<h2>How about a truckload of links?</h2>
+								<div>
+									<div class="row">
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="#">Sed neque nisi consequat</a></li>
+												<li><a href="#">Dapibus sed mattis blandit</a></li>
+												<li><a href="#">Quis accumsan lorem</a></li>
+												<li><a href="#">Suspendisse varius ipsum</a></li>
+												<li><a href="#">Eget et amet consequat</a></li>
+											</ul>
+										</div>
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="#">Quis accumsan lorem</a></li>
+												<li><a href="#">Sed neque nisi consequat</a></li>
+												<li><a href="#">Eget et amet consequat</a></li>
+												<li><a href="#">Dapibus sed mattis blandit</a></li>
+												<li><a href="#">Vitae magna sed dolore</a></li>
+											</ul>
+										</div>
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="#">Sed neque nisi consequat</a></li>
+												<li><a href="#">Dapibus sed mattis blandit</a></li>
+												<li><a href="#">Quis accumsan lorem</a></li>
+												<li><a href="#">Suspendisse varius ipsum</a></li>
+												<li><a href="#">Eget et amet consequat</a></li>
+											</ul>
+										</div>
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="#">Quis accumsan lorem</a></li>
+												<li><a href="#">Sed neque nisi consequat</a></li>
+												<li><a href="#">Eget et amet consequat</a></li>
+												<li><a href="#">Dapibus sed mattis blandit</a></li>
+												<li><a href="#">Vitae magna sed dolore</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						</div>
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<h2>Something of interest</h2>
+								<p>Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed.
+								Suspendisse eu varius nibh. Suspendisse vitae magna eget odio amet
+								mollis justo facilisis quis. Sed sagittis mauris amet tellus gravida
+								lorem ipsum dolor sit amet consequat blandit.</p>
+								<footer class="controls">
+									<a href="#" class="button">Oh, please continue ....</a>
+								</footer>
+							</section>
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+
+							<div id="copyright">
+								&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
