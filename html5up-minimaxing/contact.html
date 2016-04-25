@@ -22,21 +22,11 @@
 
 							<header id="header">
 								<h1><a href="#" id="logo">StudentPad</a></h1>
-								
 								<nav id="nav">
-									<a href="home.html" class="current-page-item ">my home</a>
+									<a href="home.html">my home</a>
 									<a href="profil.html" >Profil</a>
-									<a href="contact.html" >Contact</a>
-									<a href="onecolumn.html" >Deconnexion</a>
-								</nav>
-							</header>
-							<header id ="header2">
-								<nav id="nav2">
-									<a href="semainier.html">IHM</a>
-									<a href="twocolumn1.html" >CAR</a>
-									<a href="twocolumn2.html" >ABD</a>
-									<a href="twocolumn2.html" >AeA</a>
-									<a href="twocolumn2.html" >BI</a>
+									<a href="contact.html" class="current-page-item ">Contact</a>
+									<a href="onecolumn.html">Deconnexion</a>
 								</nav>
 							</header>
 
@@ -47,58 +37,7 @@
 			<div id="main">
 				<div class="container">
 					<div class="row main-row">
-						<div class="3u 12u(mobile)">
-
-							<section>
-								<h2>Compelling links</h2>
-								<ul class="link-list">
-									<li><a href="#">Quis accumsan lorem</a></li>
-									<li><a href="#">Sed neque nisi consequat</a></li>
-									<li><a href="#">Eget et amet consequat</a></li>
-									<li><a href="#">Dapibus sed mattis blandit</a></li>
-									<li><a href="#">Vitae magna sed dolore</a></li>
-									<li><a href="#">Eget et amet consequat</a></li>
-									<li><a href="#">Dapibus sed mattis blandit</a></li>
-								</ul>
-							</section>
-
-							<section>
-								<h2>Something profound</h2>
-								<p>Duis neque sed nisi, dapibus sed mattis rutrum accumsan sed.
-								Suspendisse eu varius amet nibh. Suspendisse vitae magna eget odio amet
-								mollis justo facilisis quis. Sed sagittis mauris amet tellus gravida
-								lorem ipsum dolor consequat blandit tempus ipsum dolor lorem sit amet.</p>
-							</section>
-
-						</div>
-						<div class="6u 12u(mobile) important(mobile)">
-
-							<section class="middle-content">
-								<div id="check_div">
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox" checked> ABD</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox" checked> AeA</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> ASEa</label><br><br>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox" checked> BI</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox" checked> CAR</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox" > CMPL</label><br><br>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> FAA</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> HECI</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox" checked> IHM</label><br><br>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox" > LABD</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> M3DS</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> PAC</label><br><br>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> PPD</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> RDF</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> RXA</label><br><br>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> SVL</label>
-								<label><input type="checkbox" id="cbox1" value="premiere_checkbox"> TI</label>
-
-								<p style="margin-top : 1.5em"><input type="submit" class ="button" value="Enregistrer" ></p>
-	</div>
-							</section>
-
-						</div>
-						<div class="3u 12u(mobile)">
+						<div class="4u 12u(mobile)">
 
 							<section>
 								<h2>Membres enregistrés</h2>
@@ -132,6 +71,24 @@
 										
 									</div>
 								</div>
+							</section>
+
+						</div>
+						<div class="8u 12u(mobile) important(mobile)">
+
+							<section class="right-content">
+								<h2 style="text-align: center">Contact</h2>
+									<form id="myform" action="mailto:contact@studentpad.fr" method="post" name="contact">
+										Pseudo : <p> <input name="name" value="Francis Laliane">
+										<p>Raison : <p>
+										<select name="reason">
+											<option value="Autre">Autre</option>
+											<option value="Detection d'une anomalie">Détection d'une anomalie</option>
+											<option value="Recommandation">Recommandation</option>
+										</select> <p>Message : <p>
+										<textarea name="message" rows="3" cols="60"></textarea></p>
+										<input type="submit"  class="button" value="envoyer">
+									</form>
 							</section>
 
 						</div>
