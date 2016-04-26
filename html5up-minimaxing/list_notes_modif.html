@@ -22,7 +22,7 @@
 
 							<header id="header">
 								<h1><a href="index2.html" id="logo">StudentPad</a></h1>
-								
+
 								<nav id="nav">
 									<a href="index.html" >Home</a>
 									<a href="twocolumn1.html" >Profil</a>
@@ -52,7 +52,9 @@
 							<section class="middle-content">
 								<h2 >Liste des notes d'IHM pour le cours du 12/01/2016</h2>
 
-								<h4>Uploader une note pour ce cours : <input type="file" name"note"> <input type="button" value="Envoyer note"></h4>
+								<h3>Uploader une note pour ce cours : </h3><input type="file" name"note">
+								<br><br>
+								<input type="submit" class = "button"  value="Envoyer note" style="font-size : 16px" onclick="window.location='list_notes_modif.html';" >
 								<br>
 								<br>
 								<table id="table_semainier">
@@ -92,7 +94,7 @@
 											Francis Laliane
 										</td>
 										<td>
-											1,5/5
+											NA/5
 										</td>
 										<td>
 											<a href="view_note.html" title="Voir la note"><img src="images/notes.png" alt="icone_note" height="30px" width="30px"></a>
@@ -139,14 +141,71 @@
 										</td>
 									</tr>
 								</table>
+
+								<br>
+								<br>
+								<h2 >Liste de mes notes d'IHM pour le cours du 12/01/2016</h2>
+
+
+								<table id="table_semainier">
+									<tr>
+										<th>
+											Évaluation <a href="notes_list_tri_eval_inv.html">▼</a>
+										</th>
+										<th colspan="2">
+											Voir la note
+										</th>
+										<th>
+											Télécharger la note
+										</th>
+										<th>
+											Éxercice disponible
+										</th>
+									</tr>
+									<tr>
+										<td>
+											4/5
+										</td>
+										<td>
+											<a href="view_note.html" title="Voir la note"><img src="images/notes.png" alt="icone_note" height="30px" width="30px"></a>
+										</td>
+										<td>
+											<a href="view_note_with_video.html" title="Voir la note ET la vidéo"><img src="images/video.png" alt="icone_note_video" height="30px" width="30px"></a>
+										</td>
+										<td>
+											<a href="files/note.txt" download="note.txt" title="Télécharger la note"><img src="images/download.jpg" alt="icone_download" height="30px" width="30px"></a>
+										</td>
+										<td>
+											<a href="apprentissage.html">Exercice 1</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											NA/5
+										</td>
+										<td>
+											<a href="view_note.html" title="Voir la note"><img src="images/notes.png" alt="icone_note" height="30px" width="30px"></a>
+										</td>
+										<td>
+											<a href="view_note_with_video.html" title="Voir la note ET la vidéo"><img src="images/video.png" alt="icone_note_video" height="30px" width="30px"></a>
+										</td>
+										<td>
+											<a href="files/note.txt" download="note.txt" title="Télécharger la note"><img src="images/download.jpg" alt="icone_download" height="30px" width="30px"></a>
+										</td>
+										<td>
+
+										</td>
+									</tr>
+								</table>
+
 								<br>
 								<br>
 								<br>
 								<br>
-								<a style="float: right;margin: 0 0 10px 10px;"href="notes_create_note.html" title="créer une note"><img src="images/create_note.png" alt="icone_note" height="60px" width="60px" > </a>
+								<a href="notes_create_note.html" class = "button" style= "margin-right : 44%">créer une note</a><!--<input type="button" class = "button"  value="Envoyer note">-->
 							</section>
 						</div>
-						
+
 					<div class="3u 12u(mobile)">
 
 						<section>
@@ -178,7 +237,7 @@
 												<li><a href="#">notes en cours d'édition</a></li>
 											</ul>
 										</div>
-										
+
 									</div>
 								</div>
 							</section>
