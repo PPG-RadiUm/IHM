@@ -22,7 +22,7 @@
 
 							<header id="header">
 								<h1><a href="index2.html" id="logo">StudentPad</a></h1>
-
+								
 								<nav id="nav">
 									<a href="index.html" >Home</a>
 									<a href="twocolumn1.html" >Profil</a>
@@ -52,9 +52,7 @@
 							<section class="middle-content">
 								<h2 >Liste des notes d'IHM pour le cours du 12/01/2016</h2>
 
-								<h3>Uploader une note pour ce cours : </h3><input type="file" name"note">
-								<br><br>
-								<input type="submit" class = "button"  value="Envoyer note" style="font-size : 16px" onclick="window.location='list_notes_modif.html';" >
+								<h4>Uploader une note pour ce cours : <input type="file" name"note"> <input type="submit" value="Envoyer note" onclick="location.href='list_notes_modif.html';"></h4>
 								<br>
 								<br>
 								<table id="table_semainier">
@@ -124,53 +122,14 @@
 										</td>
 									</tr>
 								</table>
-
-								<br>
-								<br>
-								<h2 >Liste de mes notes d'IHM pour le cours du 12/01/2016</h2>
-
-
-								<table id="table_semainier">
-									<tr>
-										<th>
-											Évaluation <a href="notes_list_tri_eval_inv.html">▼</a>
-										</th>
-										<th colspan="2">
-											Voir la note
-										</th>
-										<th>
-											Télécharger la note
-										</th>
-										<th>
-											Éxercice disponible
-										</th>
-									</tr>
-									<tr>
-										<td>
-											4/5
-										</td>
-										<td>
-											<a href="view_note.html" title="Voir la note"><img src="images/notes.png" alt="icone_note" height="30px" width="30px"></a>
-										</td>
-										<td>
-											<a href="view_note_with_video.html" title="Voir la note ET la vidéo"><img src="images/video.png" alt="icone_note_video" height="30px" width="30px"></a>
-										</td>
-										<td>
-											<a href="files/note.txt" download="note.txt" title="Télécharger la note"><img src="images/download.jpg" alt="icone_download" height="30px" width="30px"></a>
-										</td>
-										<td>
-											<a href="apprentissage.html">Exercice 1</a>
-										</td>
-									</tr>
-								</table>
 								<br>
 								<br>
 								<br>
 								<br>
-								<a href="notes_create_note.html" class = "button" style= "margin-right : 44%">créer une note</a>
+								<a href="notes_create_note.html" class = "button">créer une note</a>
 							</section>
 						</div>
-
+						
 					<div class="3u 12u(mobile)">
 
 						<section>
@@ -202,7 +161,7 @@
 												<li><a href="#">notes en cours d'édition</a></li>
 											</ul>
 										</div>
-
+										
 									</div>
 								</div>
 							</section>
@@ -214,6 +173,50 @@
 			<div id="footer-wrapper">
 				<div class="container">
 					<div class="row">
+						<div class="8u 12u(mobile)">
+
+							<section>
+								<!-- <h2>How about a truckload of links?</h2> -->
+								<div>
+									<div class="row">
+										<div class="6u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="home.html">Home</a></li>
+												<li><a href="twocolumn1.html">Profil</a></li>
+												<li><a href="twocolumn2.html">Contact</a></li>
+												<li><a href="index.html">Deconnexion</a></li>
+											</ul>
+										</div>
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="semainier.html">IHM</a></li>
+												<li><a href="twocolumn1.html">CAR</a></li>
+												<li><a href="twocolumn2.html">ABD</a></li>
+												<li><a href="twocolumn2.html">AeA</a></li>
+												<li><a href="twocolumn2.html">BI</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						</div>
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<h2>StudentPad</h2>
+								<p>Nous sommes une équipe d'étudiants en devenir proposant un outil révolutionnaire pour la réussite scolaire de tous les étudiants. N'hésitez pas à soutenir notre projet. Merci !</p>
+								<p style="margin-bottom:0">( •_•)</p>
+								<p style="margin-bottom:0">( •_•)>⌐■-■</p>
+								<p style="margin-bottom:1">(⌐■_■)</p>
+								<footer class="controls" style="text-align:right">
+									<a href="#" class="button">Support us ♥</a>
+								</footer>
+							</section>
+
+						</div>
+					</div>
+					<div class="row">
 						<div class="12u">
 
 							<div id="copyright">
@@ -224,6 +227,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 
 		<!-- Scripts -->
