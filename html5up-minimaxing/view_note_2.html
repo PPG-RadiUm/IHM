@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Minimaxing by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<script> language="JavaScript" 
+				function check_empty() {
+				if (document.getElementById('cours').value == "" || document.getElementById('date').value == "") {
+					alert("Fill All Fields !");
+				} else {
+					document.getElementById('form').submit();
+					alert("Form Submitted Successfully...");
+				}
+			}
+			//Function To Display Popup
+			function div_show() {
+			document.getElementById('abc').style.display = "block";
+			}
+			//Function to Hide Popup
+			function div_hide(){
+			document.getElementById('abc').style.display = "none";
+			}
+			function save_img(){
+			document.getElementById('my_frame').setAttribute('src', 'https://beta.etherpad.org/p/IHM_Cours_2_img');
+			}
+</script>
+<html>
+	<head>
+		<title>StudentPad</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	
+	<body>
+		<div id="page-wrapper">
+			<div id="header-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+
+							<header id="header">
+								<h1><a href="#" id="logo">StudentPad</a></h1>
+								
+								<nav id="nav">
+									<a href="home.html" >Home</a>
+									<a href="twocolumn1.html" >Profil</a>
+									<a href="twocolumn2.html" >Contact</a>
+									<a href="index.html" >Deconnexion</a>
+								</nav>
+							</header>
+							<header id ="header2">
+								<nav id="nav2">
+									<a href="semainier.html" class="current-page-item ">IHM</a>
+									<a href="twocolumn1.html" >CAR</a>
+									<a href="twocolumn2.html" >ABD</a>
+									<a href="twocolumn2.html" >AeA</a>
+									<a href="twocolumn2.html" >BI</a>
+								</nav>
+							</header>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="main">
+				<div class="container">
+					<div class="row main-row">
+						
+						<div class="8u 12u(mobile) important(mobile)">
+
+							<section class="right-content">
+
+								<div class="rating rating2"><!--
+									--><a href="#5" title="Give 5 stars">★</a><!--
+									--><a href="#4" title="Give 4 stars">★</a><!--
+									--><a href="#3" title="Give 3 stars">★</a><!--
+									--><a href="#2" title="Give 2 stars">★</a><!--
+									--><a href="#1" title="Give 1 star">★</a>
+								</div>
+								<IFRAME id="my_frame" SRC="https://beta.etherpad.org/p/evaluation_notes_ihm" width=90% height=700 style="margin:auto">  </IFRAME>
+								 
+							</section>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="8u 12u(mobile)">
+
+							<section>
+								<!-- <h2>How about a truckload of links?</h2> -->
+								<div>
+									<div class="row">
+										<div class="6u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="home.html">Home</a></li>
+												<li><a href="twocolumn1.html">Profil</a></li>
+												<li><a href="twocolumn2.html">Contact</a></li>
+												<li><a href="index.html">Deconnexion</a></li>
+											</ul>
+										</div>
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="semainier.html">IHM</a></li>
+												<li><a href="twocolumn1.html">CAR</a></li>
+												<li><a href="twocolumn2.html">ABD</a></li>
+												<li><a href="twocolumn2.html">AeA</a></li>
+												<li><a href="twocolumn2.html">BI</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						</div>
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<h2>StudentPad</h2>
+								<p>Nous sommes une équipe d'étudiants en devenir proposant un outil révolutionnaire pour la réussite scolaire de tous les étudiants. N'hésitez pas à soutenir notre projet. Merci !</p>
+								<p style="margin-bottom:0">( •_•)</p>
+								<p style="margin-bottom:0">( •_•)>⌐■-■</p>
+								<p style="margin-bottom:1">(⌐■_■)</p>
+								<footer class="controls" style="text-align:right">
+									<a href="#" class="button">Support us ♥</a>
+								</footer>
+							</section>
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+
+							<div id="copyright">
+								&copy; StudentPad. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
